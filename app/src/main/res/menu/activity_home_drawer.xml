@@ -4,28 +4,30 @@
       tools:showIn="navigation_view">
 
         <item
-                android:id="@+id/nav_camera"
-                android:icon="@drawable/ic_menu_camera"
-                android:title="Rutas"/>
+                android:id="@+id/iniciarSesion_home"
+                android:icon="@drawable/iniciar_sesion"
+                android:title="@string/iniciarSesion_str"/>
+
         <item
-                android:id="@+id/nav_gallery"
-                android:icon="@drawable/ic_menu_gallery"
-                android:title="Sesion"/>
+                android:id="@+id/rutas_home"
+                android:icon="@drawable/ic_rutas"
+                android:title="@string/rutas_str"/>
+
         <item
-                android:id="@+id/nav_slideshow"
-                android:icon="@drawable/ic_menu_slideshow"
-                android:title="Cambios"/>
-        <item
-                android:id="@+id/nav_manage"
+                android:id="@+id/modificarRutas_home"
                 android:icon="@drawable/ic_menu_manage"
-                android:title="Nuevas"/>
+                android:title="@string/modificarRutas_str"/>
+        <item
+                android:id="@+id/nuevaRuta_home"
+                android:icon="@drawable/ic_agregar"
+                android:title="@string/nuevaRuta_str"/>
 
     <item android:title="Communicate">
         <menu>
             <item
-                    android:id="@+id/nav_share"
-                    android:icon="@drawable/ic_menu_share"
-                    android:title="Programador"/>
+                    android:id="@+id/programador"
+                    android:icon="@drawable/ic_programador"
+                    android:title="@string/programador_str"/>
         </menu>
     </item>
 

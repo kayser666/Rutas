@@ -6,20 +6,20 @@ import android.support.v4.view.GravityCompat
 import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
-import android.widget.Toast
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
-import com.google.android.gms.maps.model.MarkerOptions
 import kotlinx.android.synthetic.main.activity_home.*
 import kotlinx.android.synthetic.main.app_bar_home.*
-import kotlinx.android.synthetic.main.content_home.*
+import android.support.v4.widget.DrawerLayout
+
 
 class Home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener, OnMapReadyCallback {
 
     private lateinit var mMap: GoogleMap
+    private val drawer: DrawerLayout? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,19 +49,22 @@ class Home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.nav_camera -> {
+            R.id.iniciarSesion_home -> {
 
             }
-            R.id.nav_gallery -> {
+            R.id.rutas_home -> {
 
             }
-            R.id.nav_slideshow -> {
+            R.id.modificarRutas_home -> {
 
             }
-            R.id.nav_manage -> {
+            R.id.nuevaRuta_home -> {
 
             }
-            R.id.nav_share -> {
+            R.id.programador -> {
+                supportActionBar?.hide()
+//                drawer?.setDrawerLockMode(drawer.LOCK_MODE_LOCKED_CLOSED)
+
 
             }
         }
@@ -74,6 +77,7 @@ class Home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
     {
         mMap = googleMap
         mMap.uiSettings.isZoomControlsEnabled
+        mMap.setMinZoomPreference(11.0f)
 
         val mexicali = LatLng(32.6278100, -115.4544600)
         mMap?.moveCamera(CameraUpdateFactory.newLatLng(mexicali))
