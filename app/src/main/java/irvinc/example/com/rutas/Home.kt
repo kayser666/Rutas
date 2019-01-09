@@ -73,16 +73,11 @@ class Home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
     override fun onMapReady(googleMap: GoogleMap)
     {
         mMap = googleMap
-
         mMap.uiSettings.isZoomControlsEnabled
-        mMap.uiSettings.isMyLocationButtonEnabled
+
+        val mexicali = LatLng(32.6278100, -115.4544600)
+        mMap?.moveCamera(CameraUpdateFactory.newLatLng(mexicali))
 
 
-        val sydney = LatLng(32.6278100, -115.4544600)
-        mMap?.moveCamera(CameraUpdateFactory.newLatLng(sydney))
-
-        mMap.addMarker(MarkerOptions().position(LatLng(32.6278100, -115.4544600)).title("mexicali xd"))
-
-        Toast.makeText(this, "sdfjen", Toast.LENGTH_LONG).show()
     }
 }
