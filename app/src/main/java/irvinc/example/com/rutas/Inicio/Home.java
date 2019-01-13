@@ -1,0 +1,82 @@
+package irvinc.example.com.rutas.Inicio;
+
+import android.os.Bundle;
+import android.support.v4.app.FragmentTransaction;
+import android.support.design.widget.NavigationView;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
+import irvinc.example.com.rutas.Desarrollador.Programador;
+import irvinc.example.com.rutas.R;
+
+public class Home extends AppCompatActivity
+        implements NavigationView.OnNavigationItemSelectedListener {
+
+    private DrawerLayout drawer;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_home);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.addDrawerListener(toggle);
+        toggle.syncState();
+
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
+
+        Mapa m = new Mapa();
+        getSupportFragmentManager().beginTransaction().replace(R.id.mainContentHome, m).commit();
+    }
+
+    @Override
+    public void onBackPressed() {
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START);
+        } else {
+            super.onBackPressed();
+
+            getSupportActionBar().show();
+            drawer.setDrawerLockMode(drawer.LOCK_MODE_UNLOCKED);
+        }
+    }
+
+    @SuppressWarnings("StatementWithEmptyBody")
+    @Override
+    public boolean onNavigationItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+        if (id == R.id.iniciarSesion_home) {
+
+        } else if (id == R.id.rutas_home) {
+
+        } else if (id == R.id.modificarRutas_home) {
+
+        } else if (id == R.id.nuevaRuta_home) {
+
+        } else if (id == R.id.programador) {
+            getSupportActionBar().hide();
+            drawer.setDrawerLockMode(drawer.LOCK_MODE_LOCKED_CLOSED);
+
+            Programador progra = new Programador();
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.mainContentHome, progra, "");
+            ft.setTransition(FragmentTransaction.TRANSIT_NONE);
+            ft.addToBackStack(null);
+            ft.commit();
+        }
+
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
+    }
+}
