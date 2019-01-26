@@ -9,11 +9,6 @@
             android:title="@string/iniciarSesion_str"/>
 
     <item
-            android:id="@+id/rutas_home"
-            android:icon="@drawable/ic_rutas"
-            android:title="@string/rutas_str"/>
-
-    <item
             android:id="@+id/modificarRutas_home"
             android:icon="@drawable/ic_menu_manage"
             android:title="@string/modificarRutas_str"/>

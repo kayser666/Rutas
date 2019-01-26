@@ -4,7 +4,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
-        tools:context=".Home">
+        tools:context=".Desarrollador.Programador">
 
     <android.support.v7.widget.Toolbar
             android:id="@+id/tb_desarrollador"

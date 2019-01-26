@@ -1,7 +1,9 @@
 package irvinc.example.com.rutas.Inicio;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.FragmentTransaction;
+import android.os.Handler;
+import android.os.Looper;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -57,22 +59,20 @@ public class Home extends AppCompatActivity
 
         if (id == R.id.iniciarSesion_home) {
 
-        } else if (id == R.id.rutas_home) {
-
         } else if (id == R.id.modificarRutas_home) {
 
         } else if (id == R.id.nuevaRuta_home) {
 
         } else if (id == R.id.programador) {
-            getSupportActionBar().hide();
-            drawer.setDrawerLockMode(drawer.LOCK_MODE_LOCKED_CLOSED);
-
-            Programador progra = new Programador();
-            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-            ft.replace(R.id.mainContentHome, progra, "");
-            ft.setTransition(FragmentTransaction.TRANSIT_NONE);
-            ft.addToBackStack(null);
-            ft.commit();
+                //// LANZA EL HILO PARA LA OTRA ACTIVITY ////
+            Handler handler = new Handler(Looper.getMainLooper());
+            handler.post(new Runnable() {
+                @Override
+                public void run() {
+                    Intent intent = new Intent (Home.this, Programador.class);
+                    startActivity(intent);
+                }
+            });
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
