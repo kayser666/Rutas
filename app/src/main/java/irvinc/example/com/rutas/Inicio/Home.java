@@ -25,6 +25,7 @@ public class Home extends AppCompatActivity
         setContentView(R.layout.activity_home);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("");
 
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -58,10 +59,6 @@ public class Home extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.iniciarSesion_home) {
-
-        } else if (id == R.id.modificarRutas_home) {
-
-        } else if (id == R.id.nuevaRuta_home) {
 
         } else if (id == R.id.programador) {
                 //// LANZA EL HILO PARA LA OTRA ACTIVITY ////

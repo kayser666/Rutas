@@ -8,15 +8,6 @@
             android:icon="@drawable/iniciar_sesion"
             android:title="@string/iniciarSesion_str"/>
 
-    <item
-            android:id="@+id/modificarRutas_home"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="@string/modificarRutas_str"/>
-    <item
-            android:id="@+id/nuevaRuta_home"
-            android:icon="@drawable/ic_agregar"
-            android:title="@string/nuevaRuta_str"/>
-
     <item android:title="Communicate">
         <menu>
             <item
