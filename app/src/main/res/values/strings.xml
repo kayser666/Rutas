@@ -28,5 +28,12 @@
     <string name="escuela_programadorStr">Instituto Tecnologico de Mexicali ITM</string>
     <string name="ciudad_programadorStr">Mexicali, Baja California Mexico</string>
 
+    <!-- IniciarSesion -->
+    <string name="btnIniciarSesion_Login">Entrar</string>
+    <string name="btnRegistrarse_Login">Registrarse</string>
+    <string name="txtUsuario_iniciarSesion">Usuario</string>
+    <string name="txtContra_iniciarSesion">Contraseña</string>
+    <string name="txtCheckbox_iniciarSesion">No cerrar sesion</string>
+
 
 </resources>

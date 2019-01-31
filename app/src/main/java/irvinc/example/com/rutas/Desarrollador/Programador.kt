@@ -11,6 +11,8 @@ class Programador : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.programador)
 
+        supportActionBar?.hide()
+
         val botonBack = findViewById(R.id.btnAtras_desarrollador) as ImageButton
         botonBack.setOnClickListener{
             onBackPressed()

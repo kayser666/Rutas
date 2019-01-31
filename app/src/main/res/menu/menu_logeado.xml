@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:showIn="navigation_view">
+
+    <item
+            android:id="@+id/iniciarSesion_home"
+            android:icon="@drawable/iniciar_sesion"
+            android:title="modificar datos :v"/>
+
+    <item
+            android:id="@+id/pp"
+            android:icon="@drawable/iniciar_sesion"
+            android:title="parada"/>
+
+    <item
+            android:id="@+id/c"
+            android:icon="@drawable/iniciar_sesion"
+            android:title="cerrar sesion"/>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                    android:id="@+id/programador"
+                    android:icon="@drawable/ic_programador"
+                    android:title="@string/programador_str"/>
+        </menu>
+    </item>
+
+</menu>

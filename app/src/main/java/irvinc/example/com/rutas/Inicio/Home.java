@@ -12,6 +12,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import irvinc.example.com.rutas.Desarrollador.Programador;
+import irvinc.example.com.rutas.Login.IniciarSesion;
 import irvinc.example.com.rutas.R;
 
 public class Home extends AppCompatActivity
@@ -59,8 +60,16 @@ public class Home extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.iniciarSesion_home) {
-
-        } else if (id == R.id.programador) {
+            Handler handler = new Handler(Looper.getMainLooper());
+            handler.post(new Runnable() {
+                @Override
+                public void run() {
+                    Intent intent = new Intent (Home.this, IniciarSesion.class);
+                    startActivity(intent);
+                }
+            });
+        }
+        else if (id == R.id.programador) {
                 //// LANZA EL HILO PARA LA OTRA ACTIVITY ////
             Handler handler = new Handler(Looper.getMainLooper());
             handler.post(new Runnable() {
