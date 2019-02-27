@@ -34,6 +34,7 @@
     <string name="txtUsuario_iniciarSesion">Usuario</string>
     <string name="txtContra_iniciarSesion">Contraseña</string>
     <string name="txtCheckbox_iniciarSesion">No cerrar sesion</string>
+    <string name="txtNoCuenta_iniciarSesion">¿No tienes cuenta?</string>
 
 
 </resources>

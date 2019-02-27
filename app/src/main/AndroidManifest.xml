@@ -31,8 +31,7 @@
                 android:value="@string/google_maps_key"/>
 
         <activity
-                android:name=".Login.IniciarSesion"
-                android:screenOrientation="portrait">
+                android:name=".Login.IniciarSesion">
         </activity>
 
         <activity

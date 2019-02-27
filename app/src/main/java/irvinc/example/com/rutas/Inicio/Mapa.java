@@ -69,6 +69,7 @@ public class Mapa extends Fragment implements OnMapReadyCallback {
         mapa = googleMap;
         mapa.getUiSettings().setZoomControlsEnabled(true);
         mapa.setMinZoomPreference(11.0f);
+        mapa.setMaxZoomPreference(17.0f);
 //        mapa.setOnMarkerClickListener(this);
 
         LatLng mexicali = new LatLng(32.6278100, -115.4544600);
